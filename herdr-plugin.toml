@@ -1,0 +1,14 @@
+id = "herdr-popup"
+name = "herdr-popup"
+version = "0.1.0"
+min_herdr_version = "0.8.0"
+platforms = ["macos", "linux"]
+description = "Generic popup pane for arbitrary commands."
+
+[[panes]]
+id = "popup"
+title = "popup"
+placement = "popup"
+width = "80%"
+height = "80%"
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/popup.sh\""]
