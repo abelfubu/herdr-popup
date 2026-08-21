@@ -25,17 +25,6 @@ herdr plugin link /path/to/herdr-popup-plugin --enabled
 
 ## Usage
 
-The easiest way is the `herdr-popup` wrapper (add `bin/herdr-popup` to your
-`PATH`, or let chezmoi install it — see below):
-
-```bash
-herdr-popup -- glow README.md
-herdr-popup -d /path/to/repo -- nvim -c DiffviewOpen
-herdr-popup -k -- ls -la
-```
-
-Or invoke the plugin directly:
-
 ```bash
 # Preview a markdown file with glow
 herdr plugin pane open \
@@ -93,17 +82,7 @@ else
 fi
 ```
 
-Then add `bin/herdr-popup` from this repo to your chezmoi source as
-`dot_local/bin/executable_herdr-popup` to get the wrapper on `PATH`.
-
 ## Notes / caveats
-
-- Popups are not listed in `herdr pane list` or `herdr api snapshot`, and cannot
-  be targeted with `send-keys`/`read` (see herdr#2878). They close automatically
-  when the command exits.
-- Use `--focus` if you want to interact with the popup immediately; use
-  `--no-focus` if you want the agent to keep the current pane focused.
-
 
 - Popups are not listed in `herdr pane list` or `herdr api snapshot`, and cannot
   be targeted with `send-keys`/`read` (see herdr#2878). They close automatically
